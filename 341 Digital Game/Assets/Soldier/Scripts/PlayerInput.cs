@@ -6,8 +6,7 @@ public class PlayerInput : MonoBehaviour
 {
     private CharacterControls controlActions;
 
-    [SerializeField]
-    private GameObject characterCamera;
+    public GameObject characterCamera;
 
     [SerializeField]
     private float lookSpeed = 2.0f;
@@ -58,13 +57,8 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    void OnEnable()
+    public GameObject GetCamera()
     {
-        characterCamera.SetActive(true);
-    }
-
-    void OnDisable()
-    {
-        characterCamera.SetActive(false);
+        return characterCamera;
     }
 }

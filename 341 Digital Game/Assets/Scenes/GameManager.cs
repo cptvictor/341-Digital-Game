@@ -6,8 +6,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
 
-    [SerializeField]
-    private GameObject[] soldierList;
+    public GameObject[] soldierList;
 
     // Start is called before the first frame update
     void Start()
@@ -29,16 +28,21 @@ public class GameManager : MonoBehaviour
 
     public void chooseNewSoldier(GameObject oldSoldier)
     {
-        oldSoldier.GetComponent<PlayerInput>().enabled = false;
+        // int randSoldier = Mathf.RoundToInt(Random.Range(0, soldierList.Length-1));
+        // GameObject newSoldier = soldierList[randSoldier];
+        // Debug.Log(randSoldier);
+        // while(newSoldier.GetInstanceID() == oldSoldier.GetInstanceID())
+        // {
+        //     randSoldier = Mathf.RoundToInt(Random.Range(0, soldierList.Length-1));
+        //     newSoldier = soldierList[randSoldier];
+        // }
 
-        int randSoldier = Mathf.RoundToInt(Random.Range(0, soldierList.Length-1));
-        GameObject newSoldier = soldierList[randSoldier];
-        while(newSoldier.GetInstanceID() == oldSoldier.GetInstanceID())
-        {
-            randSoldier = Mathf.RoundToInt(Random.Range(0, soldierList.Length-1));
-            newSoldier = soldierList[randSoldier];
-        }
+        PlayerInput newPlayer = newSoldier.GetComponent<PlayerInput>();
+        newPlayer.enabled = true;
+        newPlayer.GetCamera().SetActive(true);
 
-        newSoldier.GetComponent<PlayerInput>().enabled = true;
+        PlayerInput oldPlayer = oldSoldier.GetComponent<PlayerInput>();
+        oldPlayer.enabled = false;
+        oldPlayer.GetCamera().SetActive(false);
     }
 }
