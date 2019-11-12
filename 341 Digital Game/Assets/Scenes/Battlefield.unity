@@ -199,6 +199,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bee394b8c982d2489628868fcafe1b4, type: 3}
+--- !u!1 &590920145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7278061096164912880, guid: 1bee394b8c982d2489628868fcafe1b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 358505367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +379,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1311059515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7278061096164912880, guid: 1bee394b8c982d2489628868fcafe1b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1381899680}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1348200501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -440,6 +452,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
+        type: 3}
+      propertyPath: soldierList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
+        type: 3}
+      propertyPath: soldierList.Array.data[0]
+      value: 
+      objectReference: {fileID: 1311059515}
+    - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
+        type: 3}
+      propertyPath: soldierList.Array.data[1]
+      value: 
+      objectReference: {fileID: 590920145}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c664d4ffcf44eaf4d9d7618f3118d7b8, type: 3}
 --- !u!1001 &1381899680
