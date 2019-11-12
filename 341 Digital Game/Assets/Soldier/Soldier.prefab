@@ -129,10 +129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a91cf3e7deaa2548921052c8fd67e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 3
-  runSpeed: 5
-  crouchSpeed: 1
-  proneSpeed: 0.3
+  charCamera: {fileID: 7278061096164912882}
+  walkSpeed: 4
+  runSpeed: 7
+  crouchSpeed: 2
+  proneSpeed: 1
 --- !u!114 &7278061096164912881
 MonoBehaviour:
   m_ObjectHideFlags: 0

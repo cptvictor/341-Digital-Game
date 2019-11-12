@@ -9,6 +9,9 @@ public class CharacterControls : MonoBehaviour
 {
     private CharacterController charControl;
 
+    [SerializeField]
+    private GameObject charCamera;
+
     /// <summary>
     /// speed when walking normally
     /// </summary>
@@ -60,6 +63,7 @@ public class CharacterControls : MonoBehaviour
     public void Crouch()
     {
         stance = 1;
+        charCamera.transform.localPosition = new Vector3(0, 0, 0);
     }
 
     /// <summary>
@@ -68,6 +72,7 @@ public class CharacterControls : MonoBehaviour
     public void Prone()
     {
         stance = 0;
+        charCamera.transform.localPosition = new Vector3(0, -0.8f, 0);
     }
 
     /// <summary>
@@ -76,6 +81,7 @@ public class CharacterControls : MonoBehaviour
     public void Stand()
     {
         stance = 2;
+        charCamera.transform.localPosition = new Vector3(0, 0.8f, 0);
     }
 
     /// <summary>
