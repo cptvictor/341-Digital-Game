@@ -51,6 +51,7 @@ public class CharacterControls : MonoBehaviour
     {
         charControl = GetComponent<CharacterController>();
         stance = 2;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     /// <summary>
@@ -115,5 +116,12 @@ public class CharacterControls : MonoBehaviour
         charControl.Move(desiredDir * moveMult * Time.deltaTime);
     }
 
-
+    /// <summary>
+    /// rotate the character
+    /// </summary>
+    /// <param name="inputDir">direction to rotate</param>
+    public void RotateChar(float rotAmount)
+    {
+        transform.Rotate(0, rotAmount, 0);
+    }
 }
