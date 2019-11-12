@@ -26,7 +26,7 @@ public class PlayerInput : MonoBehaviour
         float lookYInput = Input.GetAxis("Mouse X") * lookSpeed;
         float lookXInput = Input.GetAxis("Mouse Y") * lookSpeed;
         controlActions.RotateChar(lookYInput);
-        characterCamera.transform.Rotate(-lookXInput, 0 , 0);
+        characterCamera.transform.Rotate(-lookXInput, 0, 0);
 
 
         if (Input.GetKeyDown(KeyCode.LeftControl))

@@ -11,14 +11,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(instance == null)
+        if (instance == null)
             instance = this;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public static GameManager Instance()
@@ -28,14 +28,13 @@ public class GameManager : MonoBehaviour
 
     public void chooseNewSoldier(GameObject oldSoldier)
     {
-        // int randSoldier = Mathf.RoundToInt(Random.Range(0, soldierList.Length-1));
-        // GameObject newSoldier = soldierList[randSoldier];
-        // Debug.Log(randSoldier);
-        // while(newSoldier.GetInstanceID() == oldSoldier.GetInstanceID())
-        // {
-        //     randSoldier = Mathf.RoundToInt(Random.Range(0, soldierList.Length-1));
-        //     newSoldier = soldierList[randSoldier];
-        // }
+        int randSoldier = Mathf.RoundToInt(Random.Range(0, soldierList.Length));
+        GameObject newSoldier = soldierList[randSoldier];
+        while (newSoldier.GetInstanceID() == oldSoldier.GetInstanceID())
+        {
+            randSoldier = Mathf.RoundToInt(Random.Range(0, soldierList.Length));
+            newSoldier = soldierList[randSoldier];
+        }
 
         PlayerInput newPlayer = newSoldier.GetComponent<PlayerInput>();
         newPlayer.enabled = true;

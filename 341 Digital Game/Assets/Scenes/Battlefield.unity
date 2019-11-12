@@ -458,6 +458,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bee394b8c982d2489628868fcafe1b4, type: 3}
+--- !u!1 &1236852127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7278061096164912880, guid: 1bee394b8c982d2489628868fcafe1b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1236852126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1311059515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7278061096164912880, guid: 1bee394b8c982d2489628868fcafe1b4,
@@ -534,7 +540,7 @@ PrefabInstance:
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: soldierList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
@@ -546,6 +552,11 @@ PrefabInstance:
       propertyPath: soldierList.Array.data[1]
       value: 
       objectReference: {fileID: 590920145}
+    - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
+        type: 3}
+      propertyPath: soldierList.Array.data[2]
+      value: 
+      objectReference: {fileID: 1236852127}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c664d4ffcf44eaf4d9d7618f3118d7b8, type: 3}
 --- !u!1001 &1381899680
