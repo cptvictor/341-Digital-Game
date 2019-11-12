@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
         int randSoldier = Mathf.RoundToInt(Random.Range(0, soldierList.Length-1));
         GameObject newSoldier = soldierList[randSoldier];
-        while(newSoldier == oldSoldier)
+        while(newSoldier.GetInstanceID() == oldSoldier.GetInstanceID())
         {
             randSoldier = Mathf.RoundToInt(Random.Range(0, soldierList.Length-1));
             newSoldier = soldierList[randSoldier];
