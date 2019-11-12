@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// general actions the characters can take
+/// </summary>
 public class CharacterControls : MonoBehaviour
 {
     private CharacterController charControl;
@@ -74,7 +77,20 @@ public class CharacterControls : MonoBehaviour
         stance = 2;
     }
 
-    public void Move()
+    /// <summary>
+    /// change running state
+    /// </summary>
+    /// <param name="isSprint"></param>
+    public void changeRunState(bool isSprint)
+    {
+        isRunning = isSprint;
+    }
+
+    /// <summary>
+    /// move the character
+    /// </summary>
+    /// <param name="inputDir">the direction to move in</param>
+    public void MoveChar(Vector2 inputDir)
     {
         float moveMult;
         switch (stance)
@@ -85,13 +101,19 @@ public class CharacterControls : MonoBehaviour
             case 1:
                 moveMult = crouchSpeed;
                 break;
-            case 2:
-                if(isRunning)
+            default:
+                if (isRunning)
                     moveMult = runSpeed;
                 else
                     moveMult = walkSpeed;
                 break;
         }
-        
+
+        Vector3 desiredDir = transform.forward * inputDir.y + transform.right * inputDir.x;
+        desiredDir.y = 0;
+
+        charControl.Move(desiredDir * moveMult * Time.deltaTime);
     }
+
+
 }
