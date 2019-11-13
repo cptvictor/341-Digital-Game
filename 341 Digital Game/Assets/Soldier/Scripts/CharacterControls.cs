@@ -36,6 +36,9 @@ public class CharacterControls : MonoBehaviour
     [SerializeField]
     private float proneSpeed = 0.3f;
 
+    [SerializeField]
+    private float gravity = 20f;
+
     /// <summary>
     /// what stance the character is in
     /// 0 - prone
@@ -117,7 +120,7 @@ public class CharacterControls : MonoBehaviour
         }
 
         Vector3 desiredDir = transform.forward * inputDir.y + transform.right * inputDir.x;
-        desiredDir.y = 0;
+        desiredDir.y -= gravity * Time.deltaTime;
 
         charControl.Move(desiredDir * moveMult * Time.deltaTime);
     }
