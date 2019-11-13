@@ -64,7 +64,6 @@ public class CharacterControls : MonoBehaviour
     {
         charControl = GetComponent<CharacterController>();
         stance = 2;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     /// <summary>

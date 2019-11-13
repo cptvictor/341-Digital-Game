@@ -8,6 +8,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] soldierList;
 
+    void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
