@@ -28,23 +28,37 @@ public class PlayerInput : MonoBehaviour
         controlActions.RotateChar(lookYInput);
         characterCamera.transform.Rotate(-lookXInput, 0, 0);
 
-
+        int curStance = controlActions.GetStance();
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            controlActions.Crouch();
+            if (curStance == 1)
+                controlActions.Stand();
+            else
+                controlActions.Crouch();
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            controlActions.Prone();
+            if (curStance == 0)
+                controlActions.Crouch();
+            else
+                controlActions.Prone();
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
-            controlActions.Stand();
+            if (curStance == 2)
+                controlActions.Jump();
+            else
+                controlActions.Stand();
+        }
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
+            controlActions.StopJump();
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             controlActions.changeRunState(true);
-            controlActions.Stand();
+            if (curStance != 2)
+                controlActions.Stand();
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {

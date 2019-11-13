@@ -134,6 +134,8 @@ MonoBehaviour:
   runSpeed: 7
   crouchSpeed: 2
   proneSpeed: 1
+  jumpSpeed: 40
+  gravity: 100
 --- !u!114 &7278061096164912881
 MonoBehaviour:
   m_ObjectHideFlags: 0

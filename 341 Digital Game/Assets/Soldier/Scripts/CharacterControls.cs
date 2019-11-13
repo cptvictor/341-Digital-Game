@@ -37,7 +37,10 @@ public class CharacterControls : MonoBehaviour
     private float proneSpeed = 0.3f;
 
     [SerializeField]
-    private float gravity = 20f;
+    private float jumpSpeed = 40f;
+
+    [SerializeField]
+    private float gravity = 100f;
 
     /// <summary>
     /// what stance the character is in
@@ -51,6 +54,10 @@ public class CharacterControls : MonoBehaviour
     /// is character sprinting
     /// </summary>
     private bool isRunning;
+
+    private bool isJumping;
+
+    private Vector3 desiredDir;
 
     // Start is called before the first frame update
     void Start()
@@ -87,6 +94,11 @@ public class CharacterControls : MonoBehaviour
         charCamera.transform.localPosition = new Vector3(0, 0.8f, 0);
     }
 
+    public int GetStance()
+    {
+        return stance;
+    }
+
     /// <summary>
     /// change running state
     /// </summary>
@@ -96,33 +108,53 @@ public class CharacterControls : MonoBehaviour
         isRunning = isSprint;
     }
 
+    public void Jump()
+    {
+        isJumping = true;
+    }
+
+    public void StopJump()
+    {
+        isJumping = false;
+    }
+
     /// <summary>
     /// move the character
     /// </summary>
     /// <param name="inputDir">the direction to move in</param>
     public void MoveChar(Vector2 inputDir)
     {
-        float moveMult;
-        switch (stance)
+        if (charControl.isGrounded)
         {
-            case 0:
-                moveMult = proneSpeed;
-                break;
-            case 1:
-                moveMult = crouchSpeed;
-                break;
-            default:
-                if (isRunning)
-                    moveMult = runSpeed;
-                else
-                    moveMult = walkSpeed;
-                break;
-        }
+            desiredDir = transform.forward * inputDir.y + transform.right * inputDir.x;
 
-        Vector3 desiredDir = transform.forward * inputDir.y + transform.right * inputDir.x;
+            float moveMult;
+            switch (stance)
+            {
+                case 0:
+                    moveMult = proneSpeed;
+                    break;
+                case 1:
+                    moveMult = crouchSpeed;
+                    break;
+                default:
+                    if (isRunning)
+                        moveMult = runSpeed;
+                    else
+                        moveMult = walkSpeed;
+                    break;
+            }
+            desiredDir *= moveMult;
+
+            if (isJumping)
+            {
+                desiredDir.y = jumpSpeed;
+                isJumping = false;
+            }
+        }
         desiredDir.y -= gravity * Time.deltaTime;
 
-        charControl.Move(desiredDir * moveMult * Time.deltaTime);
+        charControl.Move(desiredDir * Time.deltaTime);
     }
 
     /// <summary>
