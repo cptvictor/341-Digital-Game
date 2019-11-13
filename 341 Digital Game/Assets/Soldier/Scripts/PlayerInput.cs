@@ -69,6 +69,11 @@ public class PlayerInput : MonoBehaviour
         {
             GameManager.Instance().chooseNewSoldier(this.gameObject);
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public GameObject GetCamera()
