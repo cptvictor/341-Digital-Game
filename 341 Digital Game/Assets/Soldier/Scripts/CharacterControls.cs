@@ -37,7 +37,10 @@ public class CharacterControls : MonoBehaviour
     private float proneSpeed = 0.3f;
 
     [SerializeField]
-    private float gravity = 20f;
+    private float jumpSpeed = 40f;
+
+    [SerializeField]
+    private float gravity = 100f;
 
     /// <summary>
     /// what stance the character is in
@@ -51,6 +54,8 @@ public class CharacterControls : MonoBehaviour
     /// is character sprinting
     /// </summary>
     private bool isRunning;
+
+    private bool isJumping;
 
     // Start is called before the first frame update
     void Start()
@@ -87,6 +92,11 @@ public class CharacterControls : MonoBehaviour
         charCamera.transform.localPosition = new Vector3(0, 0.8f, 0);
     }
 
+    public int GetStance()
+    {
+        return stance;
+    }
+
     /// <summary>
     /// change running state
     /// </summary>
@@ -94,6 +104,11 @@ public class CharacterControls : MonoBehaviour
     public void changeRunState(bool isSprint)
     {
         isRunning = isSprint;
+    }
+
+    public void Jump()
+    {
+        isJumping = true;
     }
 
     /// <summary>
@@ -120,6 +135,11 @@ public class CharacterControls : MonoBehaviour
         }
 
         Vector3 desiredDir = transform.forward * inputDir.y + transform.right * inputDir.x;
+        if (isJumping)
+        {
+            desiredDir.y = jumpSpeed;
+            isJumping = false;
+        }
         desiredDir.y -= gravity * Time.deltaTime;
 
         charControl.Move(desiredDir * moveMult * Time.deltaTime);
