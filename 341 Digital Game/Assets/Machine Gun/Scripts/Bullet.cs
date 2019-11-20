@@ -7,6 +7,11 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private float speed = 100f;
 
+    void Start()
+    {
+        Destroy(this.gameObject, 1f);
+    }
+
     // Update is called once per frame
     void Update()
     {
