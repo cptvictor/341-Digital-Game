@@ -68,11 +68,18 @@ public class CharacterControls : MonoBehaviour
     /// </summary>
     private Vector3 desiredDir;
 
+    private Vector2 sentDir;
+
     // Start is called before the first frame update
     void Start()
     {
         charControl = GetComponent<CharacterController>();
         stance = 2;
+    }
+
+    void Update()
+    {
+        MoveChar();
     }
 
     /// <summary>
@@ -140,11 +147,11 @@ public class CharacterControls : MonoBehaviour
     /// move the character
     /// </summary>
     /// <param name="inputDir">the direction to move in</param>
-    public void MoveChar(Vector2 inputDir)
+    public void MoveChar()
     {
         if (charControl.isGrounded)
         {
-            desiredDir = transform.forward * inputDir.y + transform.right * inputDir.x;
+            desiredDir = transform.forward * sentDir.y + transform.right * sentDir.x;
 
             float moveMult;
             switch (stance)
@@ -173,6 +180,11 @@ public class CharacterControls : MonoBehaviour
         desiredDir.y -= gravity * Time.deltaTime;
 
         charControl.Move(desiredDir * Time.deltaTime);
+    }
+
+    public void SendDirInput(Vector2 inputDir)
+    {
+        sentDir = inputDir;
     }
 
     /// <summary>

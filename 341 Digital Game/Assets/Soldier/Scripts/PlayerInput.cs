@@ -21,7 +21,7 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        controlActions.MoveChar(moveInput);
+        controlActions.SendDirInput(moveInput);
 
         float lookYInput = Input.GetAxis("Mouse X") * lookSpeed;
         float lookXInput = Input.GetAxis("Mouse Y") * lookSpeed;
