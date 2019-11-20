@@ -11,6 +11,10 @@ public class PlayerInput : MonoBehaviour
     [SerializeField]
     private float lookSpeed = 2.0f;
 
+    private float lookYInput;
+
+    private float lookXInput;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +27,13 @@ public class PlayerInput : MonoBehaviour
         Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         controlActions.SendDirInput(moveInput);
 
-        float lookYInput = Input.GetAxis("Mouse X") * lookSpeed;
-        float lookXInput = Input.GetAxis("Mouse Y") * lookSpeed;
+        lookYInput += Input.GetAxis("Mouse X") * lookSpeed;
+        lookXInput += Input.GetAxis("Mouse Y") * lookSpeed;
+        lookXInput = Mathf.Clamp(lookXInput, -90f, 90f);
+
+        characterCamera.transform.localRotation = Quaternion.Euler(-lookXInput, 0f, 0f);
         controlActions.RotateChar(lookYInput);
-        characterCamera.transform.Rotate(-lookXInput, 0, 0);
+
 
         int curStance = controlActions.GetStance();
         if (Input.GetKeyDown(KeyCode.LeftControl))

@@ -193,7 +193,7 @@ public class CharacterControls : MonoBehaviour
     /// <param name="inputDir">direction to rotate</param>
     public void RotateChar(float rotAmount)
     {
-        transform.Rotate(0, rotAmount, 0);
+        transform.rotation = Quaternion.Euler(0f, rotAmount, 0f);
     }
 
     /// <summary>
