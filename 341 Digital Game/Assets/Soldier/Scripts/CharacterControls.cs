@@ -7,6 +7,9 @@ using UnityEngine;
 /// </summary>
 public class CharacterControls : MonoBehaviour
 {
+    /// <summary>
+    /// reference to Unity character controller
+    /// </summary>
     private CharacterController charControl;
 
     [SerializeField]
@@ -55,8 +58,14 @@ public class CharacterControls : MonoBehaviour
     /// </summary>
     private bool isRunning;
 
+    /// <summary>
+    /// is character jumping
+    /// </summary>
     private bool isJumping;
 
+    /// <summary>
+    /// the desired direction to move in
+    /// </summary>
     private Vector3 desiredDir;
 
     // Start is called before the first frame update
@@ -93,6 +102,10 @@ public class CharacterControls : MonoBehaviour
         charCamera.transform.localPosition = new Vector3(0, 0.8f, 0);
     }
 
+    /// <summary>
+    /// get the current soldier stance
+    /// </summary>
+    /// <returns>current stance</returns>
     public int GetStance()
     {
         return stance;
@@ -101,17 +114,23 @@ public class CharacterControls : MonoBehaviour
     /// <summary>
     /// change running state
     /// </summary>
-    /// <param name="isSprint"></param>
+    /// <param name="isSprint">is sprinting</param>
     public void changeRunState(bool isSprint)
     {
         isRunning = isSprint;
     }
 
+    /// <summary>
+    /// start jumping
+    /// </summary>
     public void Jump()
     {
         isJumping = true;
     }
 
+    /// <summary>
+    /// stop jumping
+    /// </summary>
     public void StopJump()
     {
         isJumping = false;
@@ -163,5 +182,15 @@ public class CharacterControls : MonoBehaviour
     public void RotateChar(float rotAmount)
     {
         transform.Rotate(0, rotAmount, 0);
+    }
+
+    /// <summary>
+    /// die. if currently playing as this character, change characters
+    /// </summary>
+    public void Die()
+    {
+        if(GetComponent<PlayerInput>().enabled == true)
+            GameManager.Instance().chooseNewSoldier(this.gameObject);
+        Destroy(this.gameObject);
     }
 }
