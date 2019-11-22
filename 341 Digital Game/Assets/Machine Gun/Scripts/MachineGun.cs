@@ -5,10 +5,12 @@ using UnityEngine;
 public class MachineGun : MonoBehaviour
 {
     [SerializeField]
-    private float startAngle = -45f;
+    private float coneAngleSize = 90f;
+
+    private float remainingAngle;
 
     [SerializeField]
-    private float endAngle = 45f;
+    private float turnSpeed = 3f;
 
     public GameObject bullet;
 
@@ -25,6 +27,7 @@ public class MachineGun : MonoBehaviour
     void Start()
     {
         fireTimer = 0;
+        remainingAngle = coneAngleSize;
     }
 
     // Update is called once per frame
@@ -37,6 +40,13 @@ public class MachineGun : MonoBehaviour
             Bullet newBullet = Instantiate(bullet, transform.position, transform.rotation).GetComponent<Bullet>();
             newBullet.setSpeed(bulletVelocity);
         }
-        
+
+        transform.Rotate(0, turnSpeed, 0);
+        remainingAngle -= Mathf.Abs(turnSpeed);
+        if(remainingAngle <= 0)
+        {
+            turnSpeed *= -1;
+            remainingAngle = coneAngleSize;
+        }
     }
 }
