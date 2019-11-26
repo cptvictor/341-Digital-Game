@@ -202,7 +202,9 @@ public class CharacterControls : MonoBehaviour
     public void Die()
     {
         if(GetComponent<PlayerInput>().enabled == true)
-            GameManager.Instance().chooseNewSoldier(this.gameObject);
-        Destroy(this.gameObject);
+            GameManager.Instance().processDeath(this.gameObject);
+        charCamera.SetActive(false);
+        this.gameObject.SetActive(false);
+        GetComponent<PlayerInput>().enabled = false;
     }
 }
