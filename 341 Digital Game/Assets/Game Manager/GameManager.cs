@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public string[] letterList;
 
+    private int letterIndex;
+
     public GameObject managerCam;
 
     private Text letterText;
@@ -42,6 +44,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
             instance = this;
         waveTimer = waveTime;
+        letterIndex = 0;
     }
 
     // Update is called once per frame
@@ -75,7 +78,9 @@ public class GameManager : MonoBehaviour
     {
         recentDeath = deadSoldier;
         deathCamTimer = deathCamTime;
-        letterText.text = letterList[Mathf.RoundToInt(Random.Range(0, letterList.Length))];
+
+        letterText.text = letterList[letterIndex++];
+        
         managerCam.SetActive(true);
         onDeathScreen = true;
     }
