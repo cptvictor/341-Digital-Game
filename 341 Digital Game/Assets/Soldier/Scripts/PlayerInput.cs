@@ -72,10 +72,10 @@ public class PlayerInput : MonoBehaviour
             controlActions.changeRunState(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            GameManager.Instance().chooseNewSoldier(this.gameObject);
-        }
+        // if (Input.GetKeyDown(KeyCode.F))
+        // {
+        //     GameManager.Instance().chooseNewSoldier(this.gameObject);
+        // }
 
         if(Input.GetKeyDown(KeyCode.Escape))
         {

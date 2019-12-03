@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,9 +9,33 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] soldierList;
 
+    public string[] letterList;
+
+    private int letterIndex;
+
+    public GameObject managerCam;
+
+    private Text letterText;
+
+    public float deathCamTime = 5f;
+
+    private float deathCamTimer;
+
+    private bool onDeathScreen;
+
+    private GameObject recentDeath;
+
+    public Transform[] spawnPointList;
+
+    public float waveTime = 3f;
+
+    private float waveTimer;
+
     void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        letterText = managerCam.GetComponentInChildren<Text>();
+
     }
 
     // Start is called before the first frame update
@@ -18,12 +43,30 @@ public class GameManager : MonoBehaviour
     {
         if (instance == null)
             instance = this;
+        waveTimer = waveTime;
+        letterIndex = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(onDeathScreen)
+        {
+            deathCamTimer -= Time.deltaTime;
+            if(deathCamTimer <= 0)
+            {
+                managerCam.SetActive(false);
+                chooseNewSoldier(recentDeath);
+                onDeathScreen = false;
+            }
+        }
 
+        waveTimer -= Time.deltaTime;
+        if(waveTimer <= 0)
+        {
+            respawnSoldiers();
+            waveTimer = waveTime;
+        }
     }
 
     public static GameManager Instance()
@@ -31,11 +74,22 @@ public class GameManager : MonoBehaviour
         return instance;
     }
 
-    public void chooseNewSoldier(GameObject oldSoldier)
+    public void processDeath(GameObject deadSoldier)
+    {
+        recentDeath = deadSoldier;
+        deathCamTimer = deathCamTime;
+
+        letterText.text = letterList[letterIndex++];
+        
+        managerCam.SetActive(true);
+        onDeathScreen = true;
+    }
+
+    private void chooseNewSoldier(GameObject oldSoldier)
     {
         int randSoldier = Mathf.RoundToInt(Random.Range(0, soldierList.Length));
         GameObject newSoldier = soldierList[randSoldier];
-        while (newSoldier.GetInstanceID() == oldSoldier.GetInstanceID())
+        while (newSoldier.GetInstanceID() == oldSoldier.GetInstanceID() && newSoldier.activeSelf == false)
         {
             randSoldier = Mathf.RoundToInt(Random.Range(0, soldierList.Length));
             newSoldier = soldierList[randSoldier];
@@ -44,9 +98,20 @@ public class GameManager : MonoBehaviour
         PlayerInput newPlayer = newSoldier.GetComponent<PlayerInput>();
         newPlayer.enabled = true;
         newPlayer.GetCamera().SetActive(true);
-
-        PlayerInput oldPlayer = oldSoldier.GetComponent<PlayerInput>();
-        oldPlayer.enabled = false;
-        oldPlayer.GetCamera().SetActive(false);
     }
+
+    private void respawnSoldiers()
+    {
+        for(int i = 0; i < soldierList.Length; i++)
+        {
+            GameObject curSoldier = soldierList[i];
+            if(curSoldier.activeSelf == false)
+            {
+                curSoldier.transform.position = spawnPointList[i].position;
+                curSoldier.transform.rotation = spawnPointList[i].rotation;
+                curSoldier.SetActive(true);
+            }
+        }
+    }
+
 }
