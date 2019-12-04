@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3902391043704081106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: -1.5, z: 2.3}
+  m_LocalPosition: {x: 2, y: 0, z: 2.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7278061096164422354}
@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 7278061096164912895}
   - component: {fileID: 7278061096164912894}
   - component: {fileID: 7278061096164912881}
+  - component: {fileID: 8290834982588971600}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Untagged
@@ -167,6 +168,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterCamera: {fileID: 7278061096164912882}
   lookSpeed: 2
+--- !u!114 &8290834982588971600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7278061096164912880}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ca43b69da459b49ac118f54c3312eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inTrench: 0
+  moveTime: 2
+  stanceTime: 4
+  fireTime: 0.7
 --- !u!1 &7278061096164912882
 GameObject:
   m_ObjectHideFlags: 0

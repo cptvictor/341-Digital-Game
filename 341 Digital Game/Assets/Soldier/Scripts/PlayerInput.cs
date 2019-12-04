@@ -55,9 +55,7 @@ public class PlayerInput : MonoBehaviour
             if (curStance == 2)
                 controlActions.Jump();
             else
-            {
                 controlActions.Stand();
-            }
         }
         if(Input.GetKeyUp(KeyCode.Space))
         {
