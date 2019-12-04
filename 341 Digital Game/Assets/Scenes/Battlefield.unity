@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.06
@@ -940,6 +940,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 8126584947847104562, guid: dec17d5abc4ccda4aa998c2ecde0f605,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8126584947847104525, guid: dec17d5abc4ccda4aa998c2ecde0f605,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -993,6 +998,11 @@ PrefabInstance:
     - target: {fileID: 8126584947847104525, guid: dec17d5abc4ccda4aa998c2ecde0f605,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126584947395534149, guid: dec17d5abc4ccda4aa998c2ecde0f605,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3085,6 +3095,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RenderingPath
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5744080786951436780, guid: 1bee394b8c982d2489628868fcafe1b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4618031953458219038, guid: 1bee394b8c982d2489628868fcafe1b4,
         type: 3}
