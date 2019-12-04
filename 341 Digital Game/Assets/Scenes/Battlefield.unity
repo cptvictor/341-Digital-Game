@@ -388,7 +388,7 @@ Transform:
   - {fileID: 200344551}
   - {fileID: 526027029}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &172883985 stripped
 GameObject:
@@ -953,12 +953,12 @@ PrefabInstance:
     - target: {fileID: 8126584947847104525, guid: dec17d5abc4ccda4aa998c2ecde0f605,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.644169
+      value: 83
       objectReference: {fileID: 0}
     - target: {fileID: 8126584947847104525, guid: dec17d5abc4ccda4aa998c2ecde0f605,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.731113
+      value: -36
       objectReference: {fileID: 0}
     - target: {fileID: 8126584947847104525, guid: dec17d5abc4ccda4aa998c2ecde0f605,
         type: 3}
@@ -983,7 +983,7 @@ PrefabInstance:
     - target: {fileID: 8126584947847104525, guid: dec17d5abc4ccda4aa998c2ecde0f605,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8126584947847104525, guid: dec17d5abc4ccda4aa998c2ecde0f605,
         type: 3}
@@ -1005,6 +1005,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8126584947395534148, guid: dec17d5abc4ccda4aa998c2ecde0f605,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126584947395534148, guid: dec17d5abc4ccda4aa998c2ecde0f605,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1585255664}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dec17d5abc4ccda4aa998c2ecde0f605, type: 3}
 --- !u!1 &443311639 stripped
@@ -1434,7 +1444,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &708959005
 PrefabInstance:
@@ -1600,7 +1610,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 527e7c858c937db419efe600e02a6b25,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 527e7c858c937db419efe600e02a6b25,
         type: 3}
@@ -2852,145 +2862,149 @@ PrefabInstance:
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[0]
-      value: "Dear Momma, \tI know I haven\u2019t written you in a while but I hope
-        my last letter reached you fine. I hope Billy is doing well in baseball. He\u2019s
-        got a good arm for his age. I wish I could have been there for his first game.
-        I\u2019ll see you all when I get back. Hopefully he\u2019s not too big for
-        a hug when I get back. \tLove, \tJack "
+      value: "Dear Momma,\r\n\n\tI know I haven\u2019t written you in a while but
+        I hope my last letter reached you fine. I hope Billy is doing well in baseball.
+        He\u2019s got a good arm for his age. I wish I could have been there for his
+        first game. I\u2019ll see you all when I get back. Hopefully he\u2019s not
+        too big for a hug when I get back.\r\n\n\tLove,\r\n\tJack\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[16]
-      value: "Loving Mother, \tGive my love to the choir and all of the old folks
+      value: "Loving Mother,\r\n\n\tGive my love to the choir and all of the old folks
         from church. I hope they are doing well this winter season. I know it gets
-        cold down by the lakes. I love you all. \tLove, \tJameson "
+        cold down by the lakes. I love you all.\r\n\n\tLove,\r\n\tJameson\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[15]
-      value: "Dearest Agnes, \tMy love for you will never end, in this life or the
-        next. You are the greatest part of my life and everything I do for you, I
-        do with all of me. I hope to be in your arms again soon. I love you with all
-        my heart. \tLove, \tClifford "
+      value: "Dearest Agnes,\r\n\n\tMy love for you will never end, in this life or
+        the next. You are the greatest part of my life and everything I do for you,
+        I do with all of me. I hope to be in your arms again soon. I love you with
+        all my heart.\r\n\n\tLove,\r\n\tClifford\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[14]
-      value: "Dearest Agnes, \tMy love for you will never end, in this life or the
-        next. You are the greatest part of my life and everything I do for you, I
-        do with all of me. I hope to be in your arms again soon. I love you with all
-        my heart. \tLove, \tClifford "
+      value: "Dear David,\r\n\n\tI\u2019m sending you a line in hopes you can help
+        me organize a surprise for Maryanne. You know of the tree in the valley where
+        we carved our names? It\u2019s right up the hill from the church. I want you
+        to hide her favorite chocolates and a dozen dried roses in the knot of that
+        old tree. I appreciate it so much if you can do this for me. Do it in 3 weeks\u2019
+        time and everything will still be good by the time my unit is supposed to
+        be back.\r\n\n\tYour brother,\r\n\tKenneth \r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[13]
-      value: "My dear, \tEven on the coldest nights of this winter, the thought of
-        your love keeps me warm. You are the fire that burns in me to keep going.
+      value: "My dear,\r\n\n\tEven on the coldest nights of this winter, the thought
+        of your love keeps me warm. You are the fire that burns in me to keep going.
         I cherish every moment we have spent together and the thought of more time
-        with you lifts my heart. I love you with everything I have, Sophia. \tYour
-        love, \tDonald "
+        with you lifts my heart. I love you with everything I have, Sophia.\r\n\n\tYour
+        love,\r\n\tDonald\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[12]
-      value: "My dear, \tEven on the coldest nights of this winter, the thought of
-        your love keeps me warm. You are the fire that burns in me to keep going.
-        I cherish every moment we have spent together and the thought of more time
-        with you lifts my heart. I love you with everything I have, Sophia. \tYour
-        love, \tDonald "
+      value: "Dear Emelia,\r\n\n\tI got your letters a few weeks back and finally
+        have time to write you. I do remember the dog from the Miller\u2019s farm,
+        and I\u2019m glad that they gave it to you for your birthday. They didn\u2019t
+        need any more strays running around their place anyhow. Hopefully he doesn\u2019t
+        get much bigger because then he\u2019ll be just about as big as you. Take
+        care of yourself and tell mother I love her.\r\n\n\tWith love,\r\n\tJonathan\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[11]
-      value: "Dearest Erica, \tI\u2019m sending you a line to ensure you of my safety.
-        We move to our next position tomorrow so I won\u2019t be able to write you
-        for some time. You have my heart and all my love. \tForever yours, \tMichael "
+      value: "Dearest Erica,\r\n\n\tI\u2019m sending you a line to ensure you of my
+        safety. We move to our next position tomorrow so I won\u2019t be able to write
+        you for some time. You have my heart and all my love.\r\n\n\tForever yours,\r\n\tMichael\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[10]
-      value: "Dearest Erica, \tI\u2019m sending you a line to ensure you of my safety.
-        We move to our next position tomorrow so I won\u2019t be able to write you
-        for some time. You have my heart and all my love. \tForever yours, \tMichael "
+      value: "Father,\r\n\n\tI miss all the times we shared during the summer months
+        when I was a child. You taught me so many things that have been useful for
+        me while I\u2019m away. I want you to know that I appreciate the love you\u2019ve
+        shown me. I miss you.\r\n\n\tStephen\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[9]
-      value: "Florence, \tMy sweet, I dream of you every night I lay my head down.
-        You are the light of my life and I am the luckiest man alive to have you in
-        my life. You are going to be a wonderful mother to our child. \tYour love,
-        Daniel "
+      value: "Florence,\r\n\n\tMy sweet, I dream of you every night I lay my head
+        down. You are the light of my life and I am the luckiest man alive to have
+        you in my life. You are going to be a wonderful mother to our child.\r\n\n\tYour
+        love,\r\n\tDaniel\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[8]
-      value: "Dear Jenny, \tI\u2019m sending you this line to let you know to keep
-        an eye on mother\u2019s health during this next winter. It\u2019s always rough
-        on her when the cold hits. Keep being strong for the both of you and don\u2019t
-        let her worry about me. Thank you for the chocolate bar last month. I\u2019ve
-        tried to keep it as long as I can. It really reminds me of home. \tYour brother,
-        \tHunter "
+      value: "Dear Jenny,\r\n\n\tI\u2019m sending you this line to let you know to
+        keep an eye on mother\u2019s health during this next winter. It\u2019s always
+        rough on her when the cold hits. Keep being strong for the both of you and
+        don\u2019t let her worry about me. Thank you for the chocolate bar last month.
+        I\u2019ve tried to keep it as long as I can. It really reminds me of home.\r\n\n\tYour
+        brother,\r\n\tHunter\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[7]
-      value: "Dear Josephine, \tI hope this letter reaches you in good health. I hope
-        you\u2019re getting to enjoy the flowers blooming in our garden. I love the
-        way you light up when you\u2019re out in nature. You\u2019re a true angel
-        to me, my darling. Keep watch over me like I know you are. I look at your
-        picture every night. I\u2019ll make it back to you, I promise. \tLove, \tSamuel "
+      value: "Dear Josephine,\r\n\n\tI hope this letter reaches you in good health.
+        I hope you\u2019re getting to enjoy the flowers blooming in our garden. I
+        love the way you light up when you\u2019re out in nature. You\u2019re a true
+        angel to me, my darling. Keep watch over me like I know you are. I look at
+        your picture every night. I\u2019ll make it back to you, I promise.\r\n\n\tLove,\r\n\tSamuel\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[6]
-      value: "Dear Mother, \tI miss you. \tYour son, \tDavid "
+      value: "Dear Mother,\r\n\n\tI miss you.\r\n\n\tYour son,\r\n\tDavid\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[5]
-      value: "Dear Jillian, \tI\u2019m sending you a line to check up on you and the
-        rest of the choir. Thank you for sending the care packages to me and the boys.
-        Everyone appreciates the extra socks out here. Everyone is going to sign this
-        as a thank you. I can\u2019t wait to get back and hug you again. \tFondly
-        yours, \tWilliam "
+      value: "Dear Jillian,\r\n\n\tI\u2019m sending you a line to check up on you
+        and the rest of the choir. Thank you for sending the care packages to me and
+        the boys. Everyone appreciates the extra socks out here. Everyone is going
+        to sign this as a thank you. I can\u2019t wait to get back and hug you again.\r\n\n\tFondly
+        yours,\r\n\tWilliam\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[4]
-      value: "Dear Harry, \tI remember that time Paully hit the homer over the back
-        fence. We couldn\u2019t believe it that someone that small had so much power
-        in him. Did he end up getting to talk to the coach from Penn State about getting
-        put on the team? I hope he gets to make our hometown proud. It\u2019s going
-        to be a nice sight to see him in uniform. I\u2019ll see you when I get back.
-        \tBest, \tThomas "
+      value: "Dear Harry,\r\n\n\tI remember that time Paully hit the homer over the
+        back fence. We couldn\u2019t believe it that someone that small had so much
+        power in him. Did he end up getting to talk to the coach from Penn State about
+        getting put on the team? I hope he gets to make our hometown proud. It\u2019s
+        going to be a nice sight to see him in uniform. I\u2019ll see you when I get
+        back.\r\n\n\tBest,\r\n\tThomas\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[3]
-      value: "Dear Harry, \tI remember that time Paully hit the homer over the back
-        fence. We couldn\u2019t believe it that someone that small had so much power
-        in him. Did he end up getting to talk to the coach from Penn State about getting
-        put on the team? I hope he gets to make our hometown proud. It\u2019s going
-        to be a nice sight to see him in uniform. I\u2019ll see you when I get back.
-        \tBest, \tThomas "
+      value: "Johnny,\r\n\n\tHey buddy, I hope everything is going okay with things
+        at home. I know it\u2019s rough being the man of the house while I\u2019m
+        gone but we know Momma needs some help. You keep on being strong for her and
+        I\u2019ll be back as soon as I can. You\u2019re the best little brother a
+        guy could ask for and I\u2019m glad to be your big brother.\r\n\n\tLove,\r\n\tCarter\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[2]
-      value: "Dear My Love, \tI love you so much honey. To the moon and back, I thank
-        my lucky stars that I get to call you mine. We\u2019ll get to finally start
-        a family and get you a nice garden filled with orchids like you like. We can
-        go out on the town as soon as I get back and I\u2019ll show you Mrs. Pinkerton\u2019s
-        apple orchard. I can\u2019t wait to show you everything this world has to
-        offer \tLove, \tCharlie "
+      value: "Dear My Love,\r\n\n\tI love you so much honey. To the moon and back,
+        I thank my lucky stars that I get to call you mine. We\u2019ll get to finally
+        start a family and get you a nice garden filled with orchids like you like.
+        We can go out on the town as soon as I get back and I\u2019ll show you Mrs.
+        Pinkerton\u2019s apple orchard. I can\u2019t wait to show you everything this
+        world has to offer\r\n\n\tLove,\r\n\tCharlie\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
       propertyPath: letterList.Array.data[1]
-      value: "Dear Pop, \tWhen I get back, we\u2019ll be able to finish the work on
-        the car. Hopefully that old engine we got from cousin Jim will work. It was
-        pretty beat up when we got it. I can\u2019t wait to see how far you\u2019ve
-        gotten on cleaning it up. Love you old man. \tLove, \tHarry "
+      value: "Dear Pop,\r\n\n\tWhen I get back, we\u2019ll be able to finish the work
+        on the car. Hopefully that old engine we got from cousin Jim will work. It
+        was pretty beat up when we got it. I can\u2019t wait to see how far you\u2019ve
+        gotten on cleaning it up. Love you old man.\r\n\n\tLove,\r\n\tHarry\r"
       objectReference: {fileID: 0}
     - target: {fileID: 2178996101437394331, guid: c664d4ffcf44eaf4d9d7618f3118d7b8,
         type: 3}
@@ -3333,7 +3347,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 64220c30c91a236438ca86aebe0df41e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 64220c30c91a236438ca86aebe0df41e,
         type: 3}
@@ -3490,7 +3504,7 @@ Transform:
   - {fileID: 1724455490}
   - {fileID: 572232582}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1573259943
 GameObject:
@@ -3538,11 +3552,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1585255662 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8126584947847104562, guid: dec17d5abc4ccda4aa998c2ecde0f605,
+    type: 3}
+  m_PrefabInstance: {fileID: 411012086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1585255664 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8126584947847104524, guid: dec17d5abc4ccda4aa998c2ecde0f605,
     type: 3}
   m_PrefabInstance: {fileID: 411012086}
   m_PrefabAsset: {fileID: 0}
@@ -3827,7 +3847,7 @@ Transform:
   - {fileID: 1607028643816447945}
   - {fileID: 2610337143954426602}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1794307448
 PrefabInstance:
@@ -3884,7 +3904,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: fca66ea3d14f7534d8d737f7d3214f1c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: fca66ea3d14f7534d8d737f7d3214f1c,
         type: 3}
@@ -4055,7 +4075,7 @@ Transform:
   - {fileID: 2120557660}
   - {fileID: 1528598453}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1931487593 stripped
 GameObject:
@@ -4123,130 +4143,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!1001 &2029307868
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3612548189609458476, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458476, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3612548189609458464, guid: 6c3abe894d40b314288ccee427d0c54e,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6c3abe894d40b314288ccee427d0c54e, type: 3}
 --- !u!1 &2115969126 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7278061096164912882, guid: 1bee394b8c982d2489628868fcafe1b4,
@@ -4644,7 +4540,7 @@ PrefabInstance:
     - target: {fileID: 254762683434806087, guid: 2e327859e9c1be54fa0ec354cd51caee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 254762683434806087, guid: 2e327859e9c1be54fa0ec354cd51caee,
         type: 3}
@@ -4778,7 +4674,7 @@ PrefabInstance:
     - target: {fileID: 2654201549963244894, guid: be7eaaaed753c0b4aa75555254ab6192,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2654201549963244894, guid: be7eaaaed753c0b4aa75555254ab6192,
         type: 3}
