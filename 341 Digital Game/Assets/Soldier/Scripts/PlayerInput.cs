@@ -50,12 +50,14 @@ public class PlayerInput : MonoBehaviour
             else
                 controlActions.Prone();
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (curStance == 2)
                 controlActions.Jump();
             else
+            {
                 controlActions.Stand();
+            }
         }
         if(Input.GetKeyUp(KeyCode.Space))
         {
@@ -70,6 +72,10 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             controlActions.changeRunState(false);
+        }
+        if(Input.GetMouseButtonDown(0))
+        {
+            controlActions.Fire();
         }
 
         // if (Input.GetKeyDown(KeyCode.F))
