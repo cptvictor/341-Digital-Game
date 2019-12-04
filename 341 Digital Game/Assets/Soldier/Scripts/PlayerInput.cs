@@ -71,6 +71,10 @@ public class PlayerInput : MonoBehaviour
         {
             controlActions.changeRunState(false);
         }
+        if(Input.GetMouseButtonDown(0))
+        {
+            controlActions.Fire();
+        }
 
         // if (Input.GetKeyDown(KeyCode.F))
         // {

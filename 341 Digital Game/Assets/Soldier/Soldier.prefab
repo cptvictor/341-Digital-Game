@@ -119,6 +119,10 @@ MonoBehaviour:
   proneSpeed: 1
   jumpSpeed: 8
   gravity: 20
+  bullet: {fileID: 0}
+  muzzleLoc: {fileID: 0}
+  bulletSpeed: 175
+  rateOfFire: 1
 --- !u!114 &7278061096164912881
 MonoBehaviour:
   m_ObjectHideFlags: 0
