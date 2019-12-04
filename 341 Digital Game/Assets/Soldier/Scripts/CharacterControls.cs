@@ -115,7 +115,8 @@ public class CharacterControls : MonoBehaviour
     public void Crouch()
     {
         stance = 1;
-        charCamera.transform.localPosition = new Vector3(0, 0, 0);
+        transform.localScale = new Vector3(1f, 0.5f, 1f);
+        // charCamera.transform.localPosition = new Vector3(0, 0, 0);
     }
 
     /// <summary>
@@ -124,7 +125,8 @@ public class CharacterControls : MonoBehaviour
     public void Prone()
     {
         stance = 0;
-        charCamera.transform.localPosition = new Vector3(0, -0.8f, 0);
+        transform.localScale = new Vector3(1f, 0.1f, 1f);
+        // charCamera.transform.localPosition = new Vector3(0, -0.8f, 0);
     }
 
     /// <summary>
@@ -133,7 +135,8 @@ public class CharacterControls : MonoBehaviour
     public void Stand()
     {
         stance = 2;
-        charCamera.transform.localPosition = new Vector3(0, 0.8f, 0);
+        transform.localScale = new Vector3(1f, 1f, 1f);
+        // charCamera.transform.localPosition = new Vector3(0, 0.8f, 0);
     }
 
     /// <summary>
