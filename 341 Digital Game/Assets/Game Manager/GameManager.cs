@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] soldierList;
 
+    [TextArea(2, 10000)]
     public string[] letterList;
 
     private int letterIndex;
@@ -50,10 +51,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(onDeathScreen)
+        if (onDeathScreen)
         {
             deathCamTimer -= Time.deltaTime;
-            if(deathCamTimer <= 0)
+            if (deathCamTimer <= 0)
             {
                 managerCam.SetActive(false);
                 chooseNewSoldier(recentDeath);
@@ -62,7 +63,7 @@ public class GameManager : MonoBehaviour
         }
 
         waveTimer -= Time.deltaTime;
-        if(waveTimer <= 0)
+        if (waveTimer <= 0)
         {
             respawnSoldiers();
             waveTimer = waveTime;
@@ -80,7 +81,9 @@ public class GameManager : MonoBehaviour
         deathCamTimer = deathCamTime;
 
         letterText.text = letterList[letterIndex++];
-        
+        if (letterIndex >= letterList.Length)
+            letterIndex = 0;
+
         managerCam.SetActive(true);
         onDeathScreen = true;
     }
@@ -95,6 +98,7 @@ public class GameManager : MonoBehaviour
             newSoldier = soldierList[randSoldier];
         }
 
+        newSoldier.GetComponent<AiInput>().enabled = false;
         PlayerInput newPlayer = newSoldier.GetComponent<PlayerInput>();
         newPlayer.enabled = true;
         newPlayer.GetCamera().SetActive(true);
@@ -102,10 +106,10 @@ public class GameManager : MonoBehaviour
 
     private void respawnSoldiers()
     {
-        for(int i = 0; i < soldierList.Length; i++)
+        for (int i = 0; i < soldierList.Length; i++)
         {
             GameObject curSoldier = soldierList[i];
-            if(curSoldier.activeSelf == false)
+            if (curSoldier.activeSelf == false)
             {
                 curSoldier.transform.position = spawnPointList[i].position;
                 curSoldier.transform.rotation = spawnPointList[i].rotation;
