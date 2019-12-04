@@ -70,16 +70,43 @@ public class CharacterControls : MonoBehaviour
 
     private Vector2 sentDir;
 
+    public GameObject bullet;
+
+    public GameObject muzzleLoc;
+
+    [SerializeField]
+    private float bulletSpeed = 175f;
+
+    [SerializeField]
+    private float rateOfFire = 1f;
+
+    private float fireTimer;
+
+    private bool hasFired;
+
     // Start is called before the first frame update
     void Start()
     {
         charControl = GetComponent<CharacterController>();
         stance = 2;
+
+        fireTimer = rateOfFire;
+        hasFired = false;
     }
 
     void Update()
     {
         MoveChar();
+        
+        if(hasFired)
+        {
+            fireTimer -= Time.deltaTime;
+            if(fireTimer <= 0f)
+            {
+                fireTimer = rateOfFire;
+                hasFired = false;
+            }
+        }
     }
 
     /// <summary>
@@ -88,7 +115,8 @@ public class CharacterControls : MonoBehaviour
     public void Crouch()
     {
         stance = 1;
-        charCamera.transform.localPosition = new Vector3(0, 0, 0);
+        transform.localScale = new Vector3(1f, 0.5f, 1f);
+        // charCamera.transform.localPosition = new Vector3(0, 0, 0);
     }
 
     /// <summary>
@@ -97,7 +125,8 @@ public class CharacterControls : MonoBehaviour
     public void Prone()
     {
         stance = 0;
-        charCamera.transform.localPosition = new Vector3(0, -0.8f, 0);
+        transform.localScale = new Vector3(1f, 0.1f, 1f);
+        // charCamera.transform.localPosition = new Vector3(0, -0.8f, 0);
     }
 
     /// <summary>
@@ -106,7 +135,8 @@ public class CharacterControls : MonoBehaviour
     public void Stand()
     {
         stance = 2;
-        charCamera.transform.localPosition = new Vector3(0, 0.8f, 0);
+        transform.localScale = new Vector3(1f, 1f, 1f);
+        // charCamera.transform.localPosition = new Vector3(0, 0.8f, 0);
     }
 
     /// <summary>
@@ -202,7 +232,20 @@ public class CharacterControls : MonoBehaviour
     public void Die()
     {
         if(GetComponent<PlayerInput>().enabled == true)
-            GameManager.Instance().chooseNewSoldier(this.gameObject);
-        Destroy(this.gameObject);
+            GameManager.Instance().processDeath(this.gameObject);
+        charCamera.SetActive(false);
+        this.gameObject.SetActive(false);
+        GetComponent<AiInput>().enabled = true;
+        GetComponent<PlayerInput>().enabled = false;
+    }
+
+    public void Fire()
+    {
+        if(!hasFired)
+        {
+            Bullet newBullet = Instantiate(bullet, muzzleLoc.transform.position, muzzleLoc.transform.rotation).GetComponent<Bullet>();
+            newBullet.setSpeed(bulletSpeed);
+            hasFired = true;
+        }
     }
 }
